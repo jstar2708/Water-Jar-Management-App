@@ -8,7 +8,7 @@ App shows details of all the available sellers registered on the app to the cust
 Some images of the app---->
 
 
-![15](https://user-images.githubusercontent.com/87970697/184553364-a2ba475c-a403-4048-af8a-2c629922d666.jpeg=250x400)
+![15](https://user-images.githubusercontent.com/87970697/184553364-a2ba475c-a403-4048-af8a-2c629922d666.jpeg)
 ![14](https://user-images.githubusercontent.com/87970697/184553365-1523f1b4-d1ce-4c94-acce-64b10318b1eb.jpeg)
 ![13](https://user-images.githubusercontent.com/87970697/184553366-d2af5f5b-e35c-44d2-88fb-61345e041ecb.jpeg)
 ![12](https://user-images.githubusercontent.com/87970697/184553367-0a19978d-2480-4c9e-8c50-90d0d7c489b5.jpeg)
