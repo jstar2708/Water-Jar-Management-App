@@ -1,10 +1,20 @@
 # Water-Jar-Management-App
 
 
-This is a water jar management application developed by me.This app was a task given to me in an work from home internship
-from Ticktech IT Solutions.
-This app includes two interfaces one for seller and another for customer.
-App shows details of all the available sellers registered on the app to the customers. The customer can buy jars from any one of these.
+Company Name - Ticktech IT Solutions
+- Team id - AD1108
+- Domain of Project - App development
+- Short Description of your Project- This is a water jar management application developed by me.This app was a task given to me in an work from home internship
+                                     from Ticktech IT Solutions. This app includes two interfaces one for seller and another for customer. App shows details of all                                          the available sellers registered on the app to the customers. The customer can buy jars from any one of these.
+
+- Technology Stack - Android stuido, Kotlin, Firebase, Xml, RazorPay
+- Steps to run the code - 1.Install android stuido
+                          2.Download and extract the code
+                          3.click on open project and select water jar management app
+                          
+#TIS
+#ticktechitsolutions
+
 Some images of the app---->
 
 
