@@ -31,13 +31,12 @@ class DashboardFragment : Fragment(), OnOrderViewClicked, OnPayGoItemClick {
     private val activityLauncher: ActivityResultLauncher<Intent> = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         when (it.resultCode) {
             1 -> {
-                dashboardViewModel.orderList.value?.removeAt(index)
-                dashboardViewModel.updateMonthlyOrder()
+                val order = dashboardViewModel.orderList.value?.removeAt(index)
+                dashboardViewModel.updateMonthlyOrder(order?.getOrderId().toString(), order?.getSellerId().toString())
             }
             2 -> {
-                dashboardViewModel.payGoOrderList.value?.removeAt(index)
-                dashboardViewModel.updatePayGoOrder()
-
+                val order = dashboardViewModel.payGoOrderList.value?.removeAt(index)
+                dashboardViewModel.updatePayGoOrder(order?.getOrderId().toString(), order?.getSellerId().toString())
             }
             else -> {
                 Toast.makeText(context, "Payment Failed", Toast.LENGTH_SHORT).show()
@@ -77,12 +76,12 @@ class DashboardFragment : Fragment(), OnOrderViewClicked, OnPayGoItemClick {
         })
 
         dashboardViewModel.payGoOrderList.observe(requireActivity(), Observer {
-            dashboardViewModel.payGoOrderList.value?.let { it -> payGoAdapter.updateList(it) }
+            ifPayGoOrderListIsEmpty()
+            dashboardViewModel.payGoOrderList.value?.let { it2 -> payGoAdapter.updateList(it2) }
             progressDialog.dismiss()
         })
 
         dashboardViewModel.getOrdersList()
-
 
         dashboardViewModel.getPayGoOrdersList()
 
@@ -123,22 +122,21 @@ class DashboardFragment : Fragment(), OnOrderViewClicked, OnPayGoItemClick {
     }
 
     override fun onClickPayGoOrder(sellerId: String, quantity: Int, jarPrice: Int, value: Int) {
-        val intent: Intent = Intent(requireActivity(), PaymentActivity::class.java)
+        val intent = Intent(requireActivity(), PaymentActivity::class.java)
         intent.putExtra("quantity", quantity)
         intent.putExtra("priceForJar", jarPrice)
         intent.putExtra("sellerId", sellerId)
         intent.putExtra("type", type)
-        activityLauncher.launch(intent)
         index = value
-
+        activityLauncher.launch(intent)
     }
     override fun onClickOrder(sellerId: String, jarPrice: Int, value: Int) {
-        val intent: Intent = Intent(requireActivity(), PaymentActivity::class.java)
+        val intent = Intent(requireActivity(), PaymentActivity::class.java)
         intent.putExtra("quantity", 30)
         intent.putExtra("priceForJar", jarPrice)
         intent.putExtra("sellerId", sellerId)
         intent.putExtra("type", type)
-        activityLauncher.launch(intent)
         index = value
+        activityLauncher.launch(intent)
     }
 }

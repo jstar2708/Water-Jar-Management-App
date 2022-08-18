@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.waterjarmanagement.customer.models.Jars
+import com.example.waterjarmanagement.customer.models.MonthlyOrder
 import com.example.waterjarmanagement.R
 
 class OrderAdapter(private val listener: OnOrderViewClicked): RecyclerView.Adapter<OrderViewHolder>() {
 
-    private var orderList: ArrayList<Jars> = ArrayList()
+    private var orderList: ArrayList<MonthlyOrder> = ArrayList()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OrderViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.dashboard_layout, parent, false)
         val holder = OrderViewHolder(view)
@@ -44,7 +44,7 @@ class OrderAdapter(private val listener: OnOrderViewClicked): RecyclerView.Adapt
         return orderList.size
     }
 
-    fun updateList(list: ArrayList<Jars>){
+    fun updateList(list: ArrayList<MonthlyOrder>){
         orderList.clear()
         orderList.addAll(list)
         notifyDataSetChanged()

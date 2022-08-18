@@ -120,13 +120,20 @@
     <string name="update_profile">Update Profile</string>
     <string name="log_out">Log Out</string>
     <string name="payment">Payment</string>
-    <string name="order_summary">Order Summary</string>
     <string name="seller_details">Seller details</string>
     <string name="seller_name">Seller Name</string>
     <string name="customer_details">Customer details</string>
     <string name="delivery_address">Delivery address</string>
     <string name="jar_quantity">Jar Quantity</string>
     <string name="pay_using_razor_pay">Pay using razor pay</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="order_type">Order type</string>
+    <string name="monthly_order">Monthly Order</string>
+    <string name="pay_as_you_go_order">Pay as you go order</string>
+    <string name="d">+</string>
+    <string name="ds">-</string>
+    <string name="zero">0</string>
+    <string name="confirm_order">Confirm order</string>
 
     // array for Andaman and Nicobar Islands
 
